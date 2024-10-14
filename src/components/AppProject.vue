@@ -4,4 +4,4 @@ export default {};
 <template lang="">
 	<div></div>
 </template>
-<style lang="scss"></style>
+<style lang=""></style>
