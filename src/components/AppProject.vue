@@ -18,9 +18,8 @@ export default {
 			<div class="card-body d-flex flex-column">
 				<h5 class="card-title">{{ project.name }}</h5>
 				<p class="card-text">
-					{{ project.description || "Nessuna descrizione disponibile." }}
+					{{ project.summary || "Nessuna descrizione disponibile." }}
 				</p>
-				<a href="#" class="btn btn-primary mt-auto">Scopri di più</a>
 			</div>
 		</div>
 	</div>
