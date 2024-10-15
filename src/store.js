@@ -1,4 +1,4 @@
-import {store} from 'vue'
+import {reactive} from 'vue'
 
 export const store = reactive({
     menuItems: [
@@ -8,7 +8,7 @@ export const store = reactive({
         },
         {
             name: 'projects',
-            label
+            label: 'Progetti'
         }
     ]
 });
