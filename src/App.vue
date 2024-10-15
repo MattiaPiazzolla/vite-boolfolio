@@ -1,12 +1,10 @@
 <script>
 import axios from "axios";
 import AppHeader from "./components/AppHeader.vue";
-import PageProjects from "./pages/PageProjects.vue";
 
 export default {
 	components: {
 		AppHeader,
-		PageProjects,
 	},
 	data() {
 		return {
