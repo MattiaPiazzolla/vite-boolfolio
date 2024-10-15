@@ -1,10 +1,14 @@
 <script>
 export default {
 	props: {
-		menu: Array,
+		menu: {
+			type: Array,
+			required: true,
+		},
 	},
 };
 </script>
+
 <template>
 	<header>
 		<div class="container-fluid py-3">
@@ -13,7 +17,9 @@ export default {
 					<ul
 						class="list-unstyled d-flex justify-content-center align-items-center m-0">
 						<li class="mx-2" v-for="(item, index) in menu" :key="index">
-							<a href="#">{{ item.label }}</a>
+							<router-link :to="{ name: item.name }">{{
+								item.label
+							}}</router-link>
 						</li>
 					</ul>
 				</div>
@@ -21,6 +27,7 @@ export default {
 		</div>
 	</header>
 </template>
+
 <style lang="scss">
 header {
 	color: white;
