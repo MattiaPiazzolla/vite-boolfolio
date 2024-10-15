@@ -1,10 +1,12 @@
 <script>
 import axios from "axios";
-import AppProject from "./components/AppProject.vue";
+import AppHeader from "./components/AppHeader.vue";
+import PageProjects from "./pages/PageProjects.vue";
 
 export default {
 	components: {
-		AppProject,
+		AppHeader,
+		PageProjects,
 	},
 	data() {
 		return {
@@ -38,15 +40,11 @@ export default {
 };
 </script>
 <template>
-	<header class="bg-primary mb-5">
-		<div class="container py-3">
-			<h1 class="text-center text-light">I miei progetti</h1>
-		</div>
-	</header>
+	<AppHeader />
 	<main>
 		<div class="container">
 			<div class="row">
-				<AppProject :projects="projects" />
+				<!-- <AppProject :projects="projects" /> -->
 			</div>
 		</div>
 		<nav aria-label="Page navigation">

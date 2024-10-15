@@ -23,6 +23,7 @@ export default {
 				<p class="card-text">
 					{{ project.summary || "Nessuna descrizione disponibile." }}
 				</p>
+				<p>Categoria: {{ project.category?.name || "Senza categoria" }}</p>
 			</div>
 		</div>
 	</div>
