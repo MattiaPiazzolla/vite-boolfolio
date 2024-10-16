@@ -17,7 +17,7 @@ export default {
 	methods: {
 		GetProjects(page = 1) {
 			axios
-				.get("http://localhost:8000/api/index", { params: { page: page } })
+				.get("http://localhost:8000/api/projects", { params: { page: page } })
 				.then((response) => {
 					this.projects = response.data.results.data;
 					this.last_page = response.data.results.last_page;

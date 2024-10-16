@@ -18,7 +18,6 @@ export default {
 	<main>
 		<div class="container">
 			<div class="row">
-				<!-- <AppProject :projects="projects" /> -->
 				<router-view></router-view>
 			</div>
 		</div>

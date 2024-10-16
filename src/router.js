@@ -2,6 +2,7 @@ import { createRouter, createWebHashHistory } from "vue-router";
 
 import PageHome from "./pages/PageHome.vue";
 import PageProjects from "./pages/PageProjects.vue";
+import PageProject from "./pages/PageProject.vue";
 
 const router = createRouter({
     history: createWebHashHistory(),
