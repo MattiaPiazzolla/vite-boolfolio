@@ -1,10 +1,7 @@
 <script>
 export default {
 	props: {
-		menu: {
-			type: Array,
-			required: true,
-		},
+		menu: Array,
 	},
 };
 </script>
@@ -17,9 +14,9 @@ export default {
 					<ul
 						class="list-unstyled d-flex justify-content-center align-items-center m-0">
 						<li class="mx-2" v-for="(item, index) in menu" :key="index">
-							<router-link :to="{ name: item.name }">{{
-								item.label
-							}}</router-link>
+							<router-link :to="{ name: item.name }">
+								{{ item.label }}
+							</router-link>
 						</li>
 					</ul>
 				</div>
