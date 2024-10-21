@@ -14,6 +14,7 @@ export default {
 	},
 	methods: {
 		sendForm() {
+			this.loading = true;
 			const data = {
 				name: this.name,
 				surname: this.surname,
@@ -21,16 +22,35 @@ export default {
 				phone: this.phone,
 				content: this.content,
 			};
+			this.errors = {};
 
-			axios.post(`${store.baseUrl}/contacts`, data).then((res) => {
-				if (res.data.success) {
-					this.name = "";
-					this.surname = "";
-					this.email = "";
-					this.phone = "";
-					this.content = "";
-				}
-			});
+			axios
+				.post(`${store.baseUrl}/contacts`, data)
+				.then((res) => {
+					console.log(res.data);
+					if (res.data.success) {
+						this.name = "";
+						this.surname = "";
+						this.email = "";
+						this.phone = "";
+						this.content = "";
+					} else {
+						this.errors = res.data.errors;
+					}
+					this.loading = false;
+				})
+				.catch((err) => {
+					console.log(err);
+					this.loading = false;
+					this.errors = err.response.data.errors;
+				});
+		},
+		resetContacts() {
+			this.name = "";
+			this.surname = "";
+			this.email = "";
+			this.phone = "";
+			this.content = "";
 		},
 	},
 };
