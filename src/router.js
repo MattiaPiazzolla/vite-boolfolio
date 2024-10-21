@@ -4,6 +4,7 @@ import PageHome from "./pages/PageHome.vue";
 import PageProjects from "./pages/PageProjects.vue";
 import PageProject from "./pages/PageProject.vue";
 import PageNotFound from "./pages/PageNotFound.vue";
+import PageContacts from "./pages/PageContacts.vue";
 
 const router = createRouter({
     history: createWebHistory(),
@@ -17,6 +18,11 @@ const router = createRouter({
             path: '/projects',  
             name: 'projects',   
             component: PageProjects,
+        },
+        {
+            path: '/contact',
+            name: 'contact',
+            component: PageContacts,
         },
         {
             path: '/projects/:slug',
